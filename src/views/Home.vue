@@ -29,34 +29,17 @@ export default {
   name: 'home',
   components: {
   },
+  created() {
+    this.$store.dispatch('games/fetchGameList')
+  },
+  computed: {
+    gameList() {
+      return this.$store.state.games.gameList.data
+    }
+  },
   data() {
     return {
-      gameList: [
-        {
-          'name':'CS:GO 1',
-          'imageUrl':'https://www.techadvisor.co.uk/cmsdata/features/3645914/counter_strike_global_offensive_thumb800.jpg'
-        },
-        {
-          'name':'CS:GO 2',
-          'imageUrl':'https://www.techadvisor.co.uk/cmsdata/features/3645914/counter_strike_global_offensive_thumb800.jpg'
-        },
-        {
-          'name':'CS:GO 3',
-          'imageUrl':'https://www.techadvisor.co.uk/cmsdata/features/3645914/counter_strike_global_offensive_thumb800.jpg'
-        },
-        {
-          'name':'CS:GO 4',
-          'imageUrl':'https://www.techadvisor.co.uk/cmsdata/features/3645914/counter_strike_global_offensive_thumb800.jpg'
-        },
-        {
-          'name':'CS:GO 5',
-          'imageUrl':'https://www.techadvisor.co.uk/cmsdata/features/3645914/counter_strike_global_offensive_thumb800.jpg'
-        },
-        {
-          'name':'CS:GO 6',
-          'imageUrl':'https://www.techadvisor.co.uk/cmsdata/features/3645914/counter_strike_global_offensive_thumb800.jpg'
-        }
-      ]
+      
     }
   }
 }

@@ -1,0 +1,1 @@
+export const BASE_URL = 'http://fiapjogos.herokuapp.com/fiapjogos'
