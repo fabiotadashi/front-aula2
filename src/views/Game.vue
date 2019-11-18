@@ -16,6 +16,7 @@
                 <p>Data lançamento: {{ gameDetail.releaseDate }}</p>
                 <p>Classificação: {{ gameDetail.rating }}</p>
             </v-card-text>
+            
 
         </v-card>
     </div>
